@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<style>
+/* importamos las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&family=Yellowtail&display=swap');
+*{
+    font-family: "Titillium Web";
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* SECCION INICIO */
+.inicio{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    url("https://i.imgur.com/kp2J1lQ.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+.inicio .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 0 10px;
+}
+.inicio .contenido-seccion header{
+    padding: 30px;
+}
+/* menu lateral */
+.inicio .contenido-seccion header nav{
+    position: fixed;
+    margin-left: 60px;
+    background-color: #1f1bff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 99;
+    display: none;
+}
+.inicio .contenido-seccion header nav a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/* ****** */
+.inicio .contenido-seccion header .logo{
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: "Yellowtail";
+    text-shadow: 0 0 35px #fff;
+}
+.inicio .contenido-seccion header .logo .color{
+    color: #1f1bff;
+    font-family: "Yellowtail";
+}
+.inicio .contenido-seccion header .nav-bar{
+    position: fixed;
+    background-color: #1f1bff;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.inicio .contenido-seccion header .nav-bar:hover{
+    box-shadow: 0 0 35px #fff;
+}
+.inicio .contenido-seccion .info{
+    padding-bottom: 130px;
+}
+.inicio .contenido-seccion .info h1{
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+.inicio .contenido-seccion .info h2{
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: -10px;
+    letter-spacing: 2px;
+}
+.inicio .contenido-seccion .info .redes{
+    margin: 20px 0;
+}
+.inicio .contenido-seccion .info .redes a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #000;
+    color: #1f1bff;
+    border: 1px solid #1f1bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+    transition: .3s;
+}
+.inicio .contenido-seccion .info .redes a:hover{
+    color: #fff;
+    background-color: #1f1bff;
+    box-shadow: 0 0 20px #fff;
+}
+.inicio .contenido-seccion .foto{
+    position: relative;
+}
+.inicio .contenido-seccion .foto img{
+    max-width: 200px;
+    border-radius: 50%;
+    border: 5px solid #1f1bff;
+    position: absolute;
+    left: 50%;
+    top: -100px;
+    transform: translateX(-50%);
+}
+/* estilos generales */
+.titulo-seccion{
+    font-family: "Yellowtail";
+    font-size: 1.5rem;
+}
+/* SECCION SOBRE MI */
+.sobremi{
+    background-color: #e6e6e6;
+    padding: 140px 0 100px 0;
+    text-align: center;
+}
+.sobremi .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10px;
+}
+.sobremi .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.sobremi .contenido-seccion .especial{
+    color: #1f1bff;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.sobremi .contenido-seccion p{
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+}
+.sobremi .contenido-seccion .fila{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.sobremi .contenido-seccion .fila .col{
+    width: 30%;
+}
+.sobremi .contenido-seccion .fila .col i{
+    color: #1f1bff;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #1f1bff;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.sobremi .contenido-seccion .fila .col span{
+    display: block;
+    font-weight: bold;
+    margin: 8px 0;
+}
+/* SECCION HABILIDADES */
+.habilidades{
+    padding: 80px 0 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    url("https://i.imgur.com/sfhbAed.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #fff;
+}
+.habilidades .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+}
+.habilidades .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.habilidades .contenido-seccion .fila{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.habilidades .contenido-seccion .fila .col{
+    width: 47%;
+    text-align: left;
+}
+.habilidades .contenido-seccion .fila .col .cont-barra{
+    display: flex;
+    align-items: center;
+}
+.habilidades .contenido-seccion .barra{
+    display: flex;
+    border: 1px solid #1f1bff;
+    padding: 2px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.habilidades .contenido-seccion .barra .e{
+    background-color: #363636;
+    width: 20px;
+    height: 30px;
+    margin-right: 2px;
+}
+/* SECCION HOBBIES */
+.hobbies{
+    background-color: #e6e6e6;
+    padding: 140px 0 100px 0;
+    text-align: center;
+}
+.hobbies{
+    padding: 80px 0 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    url("https://i.imgur.com/gT3JTn4.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #fff;
+}
+.hobbies .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10px;
+}
+.hobbies .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.hobbies .contenido-seccion .info{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.hobbies .contenido-seccion .info .col{
+    width: 45%;
+}
+.hobbies .contenido-seccion .info .col .titulo{
+    display: inline-block;
+    color: #1b9fff;
+    font-weight: bold;
+    border: 2px solid #1b9fff;
+    padding: 10px;
+
+}
+.hobbies .contenido-seccion .info .col table{
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+.hobbies .contenido-seccion .info .col table .datos{
+    width: 40%;
+    border-bottom: 1px solid #bab9b9;
+}
+.hobbies .contenido-seccion .info .col table h4{
+    margin-top: 10px;
+}
+.hobbies .contenido-seccion .info .col table h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.hobbies .contenido-seccion .info .col table p{
+    font-size: 14px;
+}
+.hobbies .contenido-seccion .info .col table .promedio{
+    display: block;
+    color: #1f1bff;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.hobbies .contenido-seccion .info .col table .descripcion{
+    border-left: 1px solid #bab9b9;
+    padding-left: 20px;
+}
+.hobbies .contenido-seccion .foto2{
+    position: inherit;
+}
+.hobbies .contenido-seccion .foto2 img{
+    max-width: 200px;
+    border-radius: 50%;
+    border: 5px solid #1f1bff;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(50%);
+}
+/* SECCION RESUMEN */
+.resumen{
+    background-color: #e6e6e6;
+    padding: 140px 0 100px 0;
+    text-align: center;
+}
+.resumen .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10px;
+}
+.resumen .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.resumen .contenido-seccion .info{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.resumen .contenido-seccion .info .col{
+    width: 45%;
+}
+.resumen .contenido-seccion .info .col .titulo{
+    display: inline-block;
+    color: #1f1bff;
+    font-weight: bold;
+    border: 2px solid #1f1bff;
+    padding: 10px;
+
+}
+.resumen .contenido-seccion .info .col table{
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+.resumen .contenido-seccion .info .col table .datos{
+    width: 40%;
+    border-bottom: 1px solid #bab9b9;
+}
+.resumen .contenido-seccion .info .col table h4{
+    margin-top: 10px;
+}
+.resumen .contenido-seccion .info .col table h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.resumen .contenido-seccion .info .col table p{
+    font-size: 14px;
+}
+.resumen .contenido-seccion .info .col table .promedio{
+    display: block;
+    color: #1f1bff;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.resumen .contenido-seccion .info .col table .descripcion{
+    border-left: 1px solid #bab9b9;
+    padding-left: 20px;
+}
+/* SECCION CONTACTO */
+.contacto{
+    background-color: #202020;
+    padding: 140px 0 100px 0;
+    color: #e6e6e6;
+    text-align: center;
+}
+.contacto .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10px;
+}
+.contacto .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.contacto .contenido-seccion .fila{
+    display: flex;
+    justify-content: space-around;
+}
+.contacto .contenido-seccion .fila .col{
+    margin-top: 50px;
+}
+.contacto .contenido-seccion .fila .col h2{
+    color: #1900ff;
+}
+/* SECCION RESPONSIVE */
+@media screen and (max-width:800px){
+    .habilidades .contenido-seccion .fila{
+        display: block;
+    }
+    .habilidades .contenido-seccion .fila .col{
+        width: 100%;
+        text-align: center;
+    }
+    .habilidades .contenido-seccion .fila .col .cont-barra{
+        justify-content: center;
+    }
+    .sobremi .contenido-seccion .fila{
+        display: block;
+    }
+    .sobremi .contenido-seccion .fila .col{
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .hobbies
+ .contenido-seccion .info{
+        display: block;
+    }
+    .hobbies
+ .contenido-seccion .info .col{
+        width: 90%;
+        margin: auto;
+    }
+    .hobbies
+ .contenido-seccion .info .col .titulo{
+        display: block;
+        text-align: center;
+    }
+    .hobbies
+ .contenido-seccion .info .col table{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .contacto .contenido-seccion .fila{
+        display: block;
+    }
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CV MARCOS PINTO</title>
+</head>
+<body>
+    <!-- SECCION INICIO -->
+    <section class="inicio" id="inicio">
+        <div class="contenido-seccion">
+            <header>
+                <div class="nav-bar" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <nav id="nav" class="nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobremi">Sobre mí</a>
+                    <a href="#habilidades">Habilidades</a>
+
+                    <a href="#resumen">Resumen</a>
+                    <a href="#Hobbies">Hobbies</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <div class="logo">
+                    M<span class="color">P</span>
+                </div>
+            </header>
+            <div class="info">
+                <h1>MARCOS PINTO</h1>
+                <h2>ANALISTA DE DATOS, TECNICO EN BIG DATA, PROFESIONAL</h2>
+                <div class="redes">
+                    <a href="https://www.youtube.com/channel/UCq-PcrGLejscPHQft5HxoeQ"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/xmarcos134/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCq-PcrGLejscPHQft5HxoeQ"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="foto">
+                <img src="https://i.imgur.com/3o95wKF.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section class="sobremi" id="sobremi">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Sobre Mi</h2>
+            <h3>Detalles personales</h3>
+
+            <p class="especial">Me he encargado de aplicar técnicas de segmentación y hacer el reporting de 5 análisis.</p>
+            <p>Como técnico en Big Data, mi objetivo principal es aplicar mis habilidades en análisis de datos y manejo de herramientas tecnológicas para ayudar a las empresas a transformar grandes cantidades de datos en información valiosa y útil para la toma de decisiones.
+            <div class="fila">
+                <div class="col">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="titulo-detalle">Perfil</span>
+                    <p>Con mi experiencia en programación, bases de datos y manejo de herramientas de análisis de datos, estoy preparado para contribuir al desarrollo y mantenimiento de sistemas de Big Data, y aportar soluciones creativas a los desafíos que surjan en el análisis y procesamiento de datos a gran escala.</p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <span class="titulo-detalle">Ubicación</span>
+                    <p>Como técnico en Big Data, puedes trabajar en una variedad de industrias y sectores, ya que cada vez más empresas están adoptando el análisis de datos para mejorar sus operaciones y tomar decisiones empresariales informadas.</p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-flag"></i>
+                    <span class="titulo-detalle">Intereses</span>
+                    <p>Análisis de datos: Un interés clave para un técnico en Big Data es la capacidad de analizar grandes cantidades de información y extraer información valiosa que pueda ayudar a las empresas a tomar decisiones informadas y estratégicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION HABILIDADES -->
+    <section class="habilidades" id="habilidades">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Mis habilidades</h2>
+            <h3>Me especializo en</h3>
+
+            <div class="fila">
+                <div class="col">
+                    <span>PYTHON</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="html">
+                            <!-- mediante javascript luego genereremos 17 barritas con clase e -->
+                            
+                        </div>
+                        <span>98%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>LENGUAJE R</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="javascript">
+                            <!-- mediante javascript luego genereremos 17 barritas con clase e -->
+                           
+                        </div>
+                        <span>70%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <span>POWER BI</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="wordpress">
+                            <!-- mediante javascript luego genereremos 17 barritas con clase e -->
+                           
+                        </div>
+                        <span>65%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>HADOOP</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="photoshop">
+                            <!-- mediante javascript luego genereremos 17 barritas con clase e -->
+                           
+                        </div>
+                        <span>85%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <span>SCALA</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="php">
+                            <!-- mediante javascript luego genereremos 17 barritas con clase e -->
+                           
+                        </div>
+                        <span>95%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>SQL</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="ilustrator">
+                            <!-- mediante javascript luego genereremos 17 barritas con clase e -->
+                           
+                        </div>
+                        <span>75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section>
+    <br>
+</section>
+    <!-- SECCION HOBBIES -->
+    <section class="hobbies" id="hobbies">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Hobbies</h2>
+            <h3>Mis gustos e intereses</h3>
+            <div class="info">
+                <div class="col">
+                    <span class="titulo">Videojuegos</span>
+                    <p>
+                        <br>
+                        Me apasiona el mundo de los videojuegos y dedico parte de mi tiempo libre a explorar diferentes títulos y géneros. Además de ser una forma de entretenimiento, los videojuegos también me permiten desarrollar habilidades como la resolución de problemas, la toma de decisiones y la coordinación mano-ojo.                <div class="foto">
+                            <br>                    
+                            <img src="https://i.imgur.com/Hec7wp5.jpg" width="500" height="350" alt="foto2">
+                </div>     
+            </p>
+
+                    </div>
+                <div class="col">
+                    <span class="titulo">Series/peliculas de entretenimiento</span>
+                    <p>
+                        <br>
+                        Disfruto mucho del mundo del cine y la televisión, y dedico parte de mi tiempo libre a ver películas y series de diferentes géneros y épocas. Me apasiona la forma en que estas formas de entretenimiento pueden contar historias poderosas y transmitir emociones complejas.
+                        
+                        <div class="foto">
+                            <br>
+                            <img src="https://i.imgur.com/2vOzffM.jpg" width="500" height="350" alt="foto2">
+                        </div>     
+                    </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="resumen" id="resumen">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Resumen</h2>
+            <h3>Mi preparación y experiencia</h3>
+            <div class="info">
+                <div class="col">
+                    <span class="titulo">Educación</span>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>2009 - 2022</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Participación activa en actividades extracurriculares como voluntariado y organizaciones estudiantiles.
+                                Habilidad para liderar y trabajar en equipo, comunicarse efectivamente y resolver problemas.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Educacion primaria y bachiller</h4>
+                                <p>Colegio Jose Antonio Remon Cantera</p>
+                                <span class="promedio">1.8 PG</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>2023 - 2025</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Especialización en Big Data, con énfasis en herramientas y tecnologías de Big Data como Hadoop, Spark, Python, R, entre otras.
+Conocimiento de técnicas de análisis de datos, minería de datos y visualización de datos.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Tecnico Big Data</h4>
+                                <p>ITSE</p>
+                                <span class="promedio">86 PG</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col">
+                    <span class="titulo">Experiencia Laboral</span>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>3 Años</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                 Durante tres años trabajé como programador freelancer, lo que me permitió colaborar en diversos proyectos para clientes de distintas industrias y necesidades.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Mercado Libre</h4>
+                                <p>Programador Junior</p>
+                               
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>1 Año</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Procesamiento y análisis de datos utilizando herramientas de Big Data para identificar patrones y tendencias y proporcionar información valiosa a las partes interesadas.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Elektra</h4>
+                                <p>Practica profesional</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <h3>Ponte en contacto ahora mismo!</h3>
+
+            <div class="fila">
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-phone"></i> Teléfono
+                    </h2>
+                    <span class="info-contacto">11 - 11223344</span>
+                </div>
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-envelope"></i> Correo
+                    </h2>
+                    <span class="info-contacto">marcosa.pinto@itse.ac.pa</span>
+                </div>
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-globe"></i> Página Web
+                    </h2>
+                    <span class="info-contacto">www.itse.ac.pa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
+
